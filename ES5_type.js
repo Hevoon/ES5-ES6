@@ -32,32 +32,32 @@ let r3 = capsting.replace(/(.a)/g, function (match, pos, original) {
             return 234;
     }
 });
-console.log(re1 + "---------" + re2+ "---------" +r3);
-let show=capsting.localeCompare("  zzzz");//比较传入参数和字符串在字母表中的排序大小，字符串小返回-1，大返回1，相等返回0
+console.log(re1 + "---------" + re2 + "---------" + r3);
+let show = capsting.localeCompare("  zzzz");//比较传入参数和字符串在字母表中的排序大小，字符串小返回-1，大返回1，相等返回0
 console.log(show);
-String.fromCharCode(104,101,108,108,111);//转化字符编码为字符串
+String.fromCharCode(104, 101, 108, 108, 111);//转化字符编码为字符串
 
 /*******************/
 //所有全局定义域的对象或者函数都是Global对象的属性。
 
 //1.Global对象的encodeURI()与encodeURIComponent()方法
-let uri="http://www.baidu.com/illegal value.html";
+let uri = "http://www.baidu.com/illegal value.html";
 encodeURI(uri);//不对本身输入uri的特殊字符编码，对空格会进行编码
 encodeURIComponent(uri);//使得URI所有非标准字符编译
 
 //2.Global对象的eval()方法
-let sting_show="1+2*4*5/4+222+22";
+let sting_show = "1+2*4*5/4+222+22";
 console.log(eval(sting_show));//eval()会进行执行传入参数的js代码，之后把执行代码插入，因为在调用时必须非常小心。
 
 //3.Global对象绑定了window对象。
 
 /*******************/
 //Math对象
-Math.max(1,3,4);
-Math.min(1,3,4);
+Math.max(1, 3, 4);
+Math.min(1, 3, 4);
 Math.ceil(25.3);//向上归整
 Math.floor(25.3);//向下归整
 Math.round(25.3);//四舍五入
 Math.random();//返回一个0~1之间的随机小数，不包含0,1
-let what=Math.floor(Math.random()*10+1);//1~10直接的整数，包含1，10
+let what = Math.floor(Math.random() * 10 + 1);//1~10直接的整数，包含1，10
 console.log(what);
